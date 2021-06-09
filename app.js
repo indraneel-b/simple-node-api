@@ -5,6 +5,8 @@ const db = require('./queries')
 
 let bodyParser = require('body-parser');
 app.use(bodyParser.json());
+app.use(cors());
+app.options('*', cors());
 
 let users = [];
 
